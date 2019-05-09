@@ -1,23 +1,22 @@
-var gulp = require('gulp');
-var gulpBrowser = require("gulp-browser");
-var reactify = require('reactify');
-var del = require('del');
-var size = require('gulp-size');
+const gulp = require('gulp');
+const gulpBrowser = require("@pushrocks/gulp-browser");
+// var reactify = require('reactify');
+const babelify  = require('babelify');
+const del = require('del');
+const size = require('gulp-size');
 
-
-gulp.task('transform', function () {
-    var stream = gulp.src('./project/static/scripts/jsx/*.js')
-        .pipe(gulpBrowser.browserify({ transform: ['reactify'] }))
+function transform () {
+    return gulp.src('./project/static/scripts/jsx/*.js')
+        .pipe(gulpBrowser.browserify({ transform: ['babelify'] }))
         .pipe(gulp.dest('./project/static/scripts/js/'))
         .pipe(size());
-    return stream;
-});
+};
 
-gulp.task('del', function () {
+function clear(){
     return del(['./project/static/scripts/js']);
-});
+};
 
-gulp.task('default',['del'], function () {
-    gulp.start ('transform');
-    gulp.watch('./project/static/scripts/jsx/*.js', ['transform']);
-});
+function watchFileUpdate(){
+    return  gulp.watch('./project/static/scripts/jsx/*.js').on('change', gulp.series(transform));
+}
+gulp.task('default',gulp.series( clear ,transform, watchFileUpdate));

@@ -1,21 +1,24 @@
 {
-  "name": "ultimate-flask-front-end-2.1",
+  "name": "flask_react_sample",
+  "directory": "./project/static/bower_components",
+  "homepage": "https://github.com/masterkuzutt/flask_react_sample",
   "authors": [
-    "takahiro sakai <masterkuzutt@gmail.com>"
+    "'taka <masterkuzutt+github@gmail.com>"
   ],
   "description": "",
   "main": "",
   "license": "MIT",
-  "homepage": "",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
+    "./project/static/bower_components",
     "test",
     "tests"
   ],
   "dependencies": {
-    "bootstrap":"^3.3.6",
-    "react":"^15.1.0"
+    "bootstrap": "^3.3.6",
+    "react": "^15.1.0"
   }
+  
 }

@@ -1,19 +1,32 @@
 {
-  "name": "ultimate-flask-front-end-2.1",
+  "name": "flask_react_sample",
   "version": "1.0.0",
-  "description": "",
+  "description": "```\r FLASK_APP=project/app.py\r FLASK_DEBUG=True\r ```",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/masterkuzutt/flask_react_sample.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/masterkuzutt/flask_react_sample/issues"
+  },
+  "homepage": "https://github.com/masterkuzutt/flask_react_sample#readme",
   "devDependencies": {
-    "bower": "^1.7.9",
-    "del": "^2.2.0",
-    "gulp": "^3.9.1",
-    "gulp-browser": "^2.1.4",
-    "gulp-size": "^2.1.0",
-    "reactify": "^1.1.1"
-  }
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-es2015": "^7.0.0-beta.53",
+    "@babel/preset-react": "^7.0.0",
+    "@pushrocks/gulp-browser": "^3.0.19",
+    "babelify": "^10.0.0",
+    "bower": "^1.8.8",
+    "del": "^4.1.1",
+    "gulp": "^4.0.2",
+    "gulp-size": "^3.0.0"
+  },
+  "dependencies": {}
 }

@@ -105,3 +105,6 @@ ENV/
 
 # npm stuff
 /node_modules
+
+# biuld dir
+js
